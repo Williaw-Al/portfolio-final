@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>William Alexander Almeida de Ávila - Desenvolvedor Frontend</title>
+
+  <!--Fontes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="src/css/font-awesome.css" />
+  <link rel="stylesheet" href="src/css/reset.css" />
+
+  <!-- Global -->
+  <link rel="stylesheet" href="src/css/global.css" />
+  <link rel="stylesheet" href="src/css/variables.css" />
+  <link rel="stylesheet" href="src/css/sections/header.css" />
+  <link rel="stylesheet" href="src/css/sections/home.css" />
+  <link rel="stylesheet" href="./src/css/sections/mochila.css">
+  <link rel="stylesheet" href="src/css/sections/about.css" />
+  <link rel="stylesheet" href="src/css/sections/skills.css" />
+  <link rel="stylesheet" href="src/css/sections/projects.css" />
+  <link rel="stylesheet" href="src/css/sections/footer.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+</head>
+
+<body>
+
+  <!--MARK: Header-->
+  <header class="header nav-down">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <a href="#">
+          <h1 class="logo">WA</h1>
+        </a>
+        <nav>
+          <input id="menu-hamburguer" type="checkbox" />
+
+          <label for="menu-hamburguer">
+            <div class="menu">
+              <span class="hamburguer"></span>
+            </div>
+          </label>
+          <ul>
+            <li><a href="#sobre-mim">Sobre mim</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#projetos">Meus projetos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--MARK: Home-->
+  <section class="home main">
+    <div class="full-screen row justify-content-between align-items-center">
+      <div class="triangulo"></div>
+      <div class="texto-home">
+        <p>Oi!</p>
+        <h1>Eu sou <span class="nome">William Alexander</span class="nome"></h1>
+        <h2>&#60;desenvolvedor-frontend/&#62;</h2>
+      </div>
+      <div class="img-home">
+        <div class="img-box">
+          <img src="src/images/mochtest.png" alt="foto do perfil" />
+          <div class="mochila">
+            <a href="https://www.linkedin.com/in/william-al-avila/" title="Ir para o LinkedIn" target="_blank"
+              class="linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/5555991298970" title="Enviar Mensagem no WhatsApp" target="_blank"" class=" whats">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://github.com/Williaw-Al" title="Ir para o GitHub" target="_blank" class="git">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/williawawa" title="Ir para o Instagram" target="_blank" class="insta">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <div class="espada">
+              <img src="./src/images/espada.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--MARK: About-->
+  <section class="sobre-mim main section" id="sobre-mim">
+    <div class="row justify-content-between">
+      <div class="imagem-sobre-mim">
+        <img src="./src/images/sobre-mim-foto.png" alt="ta tudo bem">
+      </div>
+      <div class="textos">
+        <h2>Sobre Mim</h2>
+        <div class="informacoes-sobre-mim">
+          <p>
+            <strong>Eae povo! Me chamo William Alexander e sou um amante da programação.</strong>
+          </p>
+          <p>
+            Tenho paixão por resolver desafios complexos de maneira criativa, principalmente ao trabalhar com barreiras
+            e
+            limites definidos. Sou comprometido, trabalhando bem tanto de forma independente quanto em equipe. Estou
+            constantemente aprendendo e aprimorando minhas habilidades para me tornar um colaborador eficaz e eficiente,
+            tendo impacto positivo com quem for trabalhar.
+          </p>
+          <p>
+            Sonho um dia em criar meu próprio Shadow of The Colossus, quem sabe 🙌🏽.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--MARK: Skills-->
+  <div class="fundo-extra">
+    <section class="habilidades main section" id="habilidades">
+      <div class="grid">
+        <h2 class="texto-vertical blank1">Habilidades</h2>
+
+        <div class="informacoes html skill1">
+          <div class="logo">
+            <i class="devicon devicon-html5-plain-wordmark" id="html"></i>
+          </div>
+          <div class="texto-skill">
+            <h3>HTML5</h3>
+            <p>Conceitos básicos; semântica; links externos e internos; tags; tabela; input; organização; button; favicon; emojis; iframes.</p>
+          </div>
+        </div>
+
+        <div class="informacoes css skill2">
+          <div class="logo">
+            <i class="devicon devicon-css3-plain-wordmark" id="css"></i>
+          </div>
+          <div class="texto-skill">
+            <h3>CSS3</h3>
+            <p>Efeito cascata; estrutura; media queries; modelo de caixa; ids e classes; especificidade; fontes; background; position; pseudo-classes; seletores; variáveis; flexbox; grid.</p>
+          </div>
+        </div>
+
+        <h2 class="texto-vertical blank2">Habilidades</h2>
+
+        <div class="informacoes github skill3">
+          <div class="logo">
+            <i class="devicon devicon-github-original" id="github"></i>
+          </div>
+          <div class="texto-skill">
+            <h3>GitHub</h3>
+            <p>Versionamento; repositórios; interface; participação; git ignore; git clone; push; add; github pages.</p>
+          </div>
+        </div>
+
+        <div class="informacoes git skill4">
+          <div class="logo">
+            <i class="devicon devicon-git-plain" id="git"></i>
+          </div>
+          <div class="texto-skill">
+            <h3>Git</h3>
+            <p>Terminal; interface; git bash; vs code; estado dos arquivos.</p>
+          </div>
+        </div>
+
+        <h2 class="texto-vertical blank3">Habilidades</h2>
+      </div>
+    </section>
+    <!--MARK: Projects-->
+    <div class="divisao main">
+      <h2>PROJETOS</h2>
+    </div>
+    <section class="projetos main section" id="projetos">
+        <div class="container-projetos">
+          <div class="projeto">
+            <a href="https://github.com/Williaw-Al/exercicios-html-css-basico" target="_blank">
+              <img src="./src/images/projeto-1.png" alt="Compilado exercícios" />
+              <h3>Compilado de atividades</h3>
+              <div class="informacoes-projeto">
+                <p>Uma landing page, contendo atividades realizadas no curso DevQuest.</p>
+                <p>🔗 Ver no GitHub Pages</p>
+              </div>
+            </a>
+          </div>
+          <div class="projeto">
+            <a href="https://github.com/Williaw-Al/desafio-1-huddle-dev-quest" target="_blank">
+              <img src="./src/images/projeto-2.png" alt="Desafios" />
+              <h3>Desafios</h3>
+              <div class="informacoes-projeto">
+                <p>A ideia é possuir um compilado de desafios, realizados por todo canto da internet.</p>
+                <p>🔗 Ver no GitHub Pages</p>
+              </div>
+            </a>
+          </div>
+          <div class="projeto">
+            <a href="https://github.com/Williaw-Al/portfolio-final" target="_blank">
+              <img src="./src/images/projeto-3.png" alt="Portfólio 0.1" />
+              <h3>Portfólio 0.1</h3>
+              <div class="informacoes-projeto">
+                <p>Esta página que vê agora.</p>
+                <p>🔗 Ver no GitHub Pages</p>
+              </div>
+            </a>
+          </div>
+        </div>
+    </section>
+  </div>
+
+  <!--MARK: Footer-->
+  <footer class="footer">
+    <div class="container">
+      <h2>Me envie uma mensagem!</h2>
+      <ul class="redesociais">
+        <li>
+          <a href="https://www.linkedin.com/in/william-al-avila/" title="Ir para o LinkedIn" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://wa.me/5555991298970" title="Enviar Mensagem no WhatsApp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/Williaw-Al" title="Ir para o GitHub" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/williawawa" title="Ir para o Instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!--Scripts-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="./src/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+.img-home .img-box {
+  background: url(../../images/foto-perfilteste.png) no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.img-home .mochila {
+  position: absolute;
+  padding: 10px;
+  bottom: 10px;
+  right: 45px;
+  width: 185px;
+  height: 160px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-radius: 10px;
+}
+
+.mochila a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  font-size: var(--fonte-extra-grande);
+  text-align: center;
+  border: 2px solid;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.mochila {
+  & .linkedin {
+    color: blue;
+  }
+
+  & .whats {
+    color: green;
+  }
+
+  & .git {
+    color: orangered;
+  }
+
+  & .insta {
+    color: red;
+  }
+}
+
+.mochila a i {
+  line-height: 60px;
+  transition: all 0.1s ease-in-out;
+}
+
+.mochila a:hover {
+  background-color: var(--cor-primaria);
+}
+
+.mochila a:hover i {
+  font-size: var(--fonte-gigante);
+}
+
+/*==============================================================
+MARK: Espada
+===============================================================*/
+
+.mochila .espada {
+  position: absolute;
+  top: -190px;
+  right: -60px;
+  transform-origin: top;
+  transition: all 0.3s ease-in;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mochila .espada img {
+  width: 150px;
+  transition: 0.3s ease-in-out;
+}
+
+.mochila:hover .espada {
+  transform: translateY(100px) rotate(180deg);
+
+  & img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 650px) {
+  .img-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-home .mochila {
+    margin-top: 50px;
+    position: initial;
+    width: 300px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+
+  .mochila .espada {
+    display: none;
+  }
+}
