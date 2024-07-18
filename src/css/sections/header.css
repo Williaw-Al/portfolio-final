@@ -36,12 +36,13 @@
 
 .header nav ul {
     display: flex;
+    gap: 10px;
 }
 
 .header nav li a {
     text-transform: capitalize;
     color: var(--cor-branca);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 100;
     padding: 20px;
     transition: 0.2s;

@@ -4,6 +4,8 @@
     width: 90%;
 }
 .sobre-mim .row{
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
     background-color: #348FED;
 }
 
@@ -19,10 +21,10 @@
 
 .sobre-mim .textos{
     max-width: 60%;
-    padding: 0 15px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .sobre-mim .textos h2{
@@ -42,6 +44,7 @@
 
 @media(max-width: 728px){
     .sobre-mim .row{
+        border-radius: 10px;
         flex-direction: column;
     }
 

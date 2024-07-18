@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  background: url(../images/fundinho.png) fixed;;
+  background: url(../images/fundo-pagina.png) fixed;
   font-family: var(--fonte-primaria);
   font-size: var(--fonte-normal);
   padding-top: 80px;

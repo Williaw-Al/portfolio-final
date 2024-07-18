@@ -38,6 +38,7 @@
     color: var(--cor-primaria);
     background: linear-gradient(120deg, transparent, transparent 80%, #141414);
     box-shadow: 10px 10px 20px black;
+    border-radius: 10px;
 }
 
 .habilidades .informacoes h3 {
