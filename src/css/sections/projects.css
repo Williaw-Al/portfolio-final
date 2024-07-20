@@ -1,4 +1,4 @@
-.divisao{
+.divisao {
     text-align: center;
     padding: 10px 0;
     margin: 100px auto 10px;
@@ -8,12 +8,13 @@
     background-color: var(--cor-branca);
     font-size: var(--fonte-grande);
 }
-.divisao h2{
+
+.divisao h2 {
     font-family: var(--fonte-extra);
 }
 
 /* PROJETOS */
-.projetos{
+.projetos {
     background-color: #5C5451;
     box-shadow: 10px 10px 20px black;
     background: linear-gradient(120deg, transparent, var(--cor-branca) 80%, #141414);
@@ -25,10 +26,10 @@
     display: grid;
     padding: 0 50px 50px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;       
+    grid-gap: 20px;
 }
 
-@media(max-width: 1280px) { 
+@media(max-width: 1280px) {
     .projetos .container-projetos {
         padding: 0 var(--mobile-padding);
     }
@@ -40,7 +41,7 @@
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
     -webkit-transition: all .3s ease;
-    position: relative;            
+    position: relative;
 }
 
 .projetos .container-projetos .projeto:hover,
@@ -60,13 +61,13 @@
 }
 
 .projetos .container-projetos .projeto .informacoes-projeto {
-    padding: 20px 20px;    
+    padding: 20px 20px;
     background-color: var(--cor-fundo-escuro);
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;    
+    opacity: 0;
     transition: all .3s ease;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -80,8 +81,8 @@
 
 .projetos .container-projetos .projeto h3 {
     font-size: 2rem;
-    font-weight: 500;    
-    position: absolute;      
+    font-weight: 500;
+    position: absolute;
     opacity: 0.7;
     background-color: var(--cor-fundo-escuro);
     width: 100%;

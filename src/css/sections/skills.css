@@ -1,40 +1,41 @@
 /* HABILIDADES */
-.habilidades{
+.habilidades {
     background-color: #5C5451;
 }
-.habilidades .informacoes{
+
+.habilidades .informacoes {
     display: flex;
     align-items: center;
     gap: 5px;
     max-width: 500px;
-    padding: 40px 10px;    
+    padding: 40px 10px;
     text-align: justify;
 }
 
-.texto-vertical{
+.texto-vertical {
     writing-mode: vertical-lr;
     text-orientation: upright;
     text-transform: uppercase;
     font-size: var(--fonte-extra-grande);
     letter-spacing: 10px;
-  }
+}
 
 .habilidades .informacoes p,
 .habilidades .informacoes h3,
-.habilidades .informacoes .logo i{
+.habilidades .informacoes .logo i {
     transition: all .3s ease;
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
     -webkit-transition: all .3s ease;
 }
 
-.texto-skill p{
+.texto-skill p {
     line-height: 30px;
 }
 
 .habilidades .informacoes:hover,
 .habilidades .informacoes:hover,
-.habilidades .informacoes:hover{
+.habilidades .informacoes:hover {
     color: var(--cor-primaria);
     background: linear-gradient(120deg, transparent, transparent 80%, #141414);
     box-shadow: 10px 10px 20px black;
@@ -45,7 +46,7 @@
     font-size: var(--fonte-extra-grande);
     font-weight: 500;
     margin-bottom: 20px;
-    color: var(--cor-primaria);      
+    color: var(--cor-primaria);
 }
 
 .habilidades .informacoes p {
@@ -60,39 +61,45 @@
 .grid {
     display: grid;
     justify-items: center;
-    grid-template-areas: 
+    grid-template-areas:
         "blank1 skill1 blank2 skill2 blank3"
         "blank1 skill3 blank2 skill4 blank3";
     grid-template-columns: 50px 1fr 50px 1fr 50px;
     grid-template-rows: 1fr 1fr;
 }
 
-.blank1{
+.blank1 {
     grid-area: blank1;
 }
-.blank2{
+
+.blank2 {
     grid-area: blank2;
 }
-.blank3{
+
+.blank3 {
     grid-area: blank3;
 }
-.skill1{
+
+.skill1 {
     grid-area: skill1;
 }
-.skill2{
+
+.skill2 {
     grid-area: skill2;
 }
-.skill3{
+
+.skill3 {
     grid-area: skill3;
 }
-.skill4{
+
+.skill4 {
     grid-area: skill4;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
     .grid {
         padding: 20px;
-        grid-template-areas: 
+        grid-template-areas:
             "blank1 skill1"
             "blank1 skill2"
             "blank2 skill3"
@@ -100,11 +107,12 @@
         grid-template-columns: 50px 1fr;
         grid-template-rows: 1fr 1fr;
     }
-    .grid .informacoes{
+
+    .grid .informacoes {
         flex-direction: column;
     }
 
-    .blank3{
+    .blank3 {
         display: none;
     }
 }
