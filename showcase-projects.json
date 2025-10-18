@@ -1,0 +1,74 @@
+[
+  {
+    "id": "pokedex",
+    "name": "Pokédex Devquest",
+    "description": "Lista de pokemon, utilizando a API pública do PokéAPI.",
+    "technologies": [
+      "html", "css", "js", "reactjs", "vite"
+    ],
+    "links": {
+      "direct": "https://pokedex-quest-react.vercel.app/",
+      "repository": "https://github.com/Williaw-Al/pokedex-quest-react"
+    },
+    "samples": {
+      "displayDesktop": "/src/assets/projects-display/pokedex-quest-showcase-desktop.png",
+      "displayTablet": "/src/assets/projects-display/pokedex-quest-showcase-tablet.png",
+      "displayMobile": "/src/assets/projects-display/pokedex-quest-showcase-mobile.png",
+      "displayQrCode": "/src/assets/projects-display/pokedex-quest-showcase-qrcode.png"
+    }
+  },
+  {
+    "id": "summary",
+    "name": "Result Summary - Frontend Mentor",
+    "description": "Landing Page responsiva, com diversas cores, variáveis, e formatações para praticar o básico de html e css.",
+    "technologies": [
+      "html", "tailwindcss", "js"
+    ],
+    "links": {
+      "direct": "https://williaw-al.github.io/responsive-result-summary-fetch-json-tailwind/",
+      "repository": "https://github.com/Williaw-Al/responsive-result-summary-fetch-json-tailwind"
+    },
+    "samples": {
+      "displayDesktop": "/src/assets/projects-display/result-summary-tailwind-showcase-desktop.png",
+      "displayTablet": "/src/assets/projects-display/result-summary-tailwind-showcase-tablet.png",
+      "displayMobile": "/src/assets/projects-display/result-summary-tailwind-showcase-mobile.png",
+      "displayQrCode": "/src/assets/projects-display/result-summary-tailwind-showcase-qrcode.png"
+    }
+  },
+  {
+    "id": "huddle",
+    "name": "Landing Page Huddle - Frontend Mentor",
+    "description": "Desafio do Frontend Mentor. Landing page com logo, uma seção simples e um rodapé. Conceitor de responsividade.",
+    "technologies": [
+      "html", "css"
+    ],
+    "links": {
+      "direct": "https://williaw-al.github.io/desafio-1-huddle-dev-quest/",
+      "repository": "https://github.com/Williaw-Al/desafio-1-huddle-dev-quest"
+    },
+    "samples": {
+      "displayDesktop": "/src/assets/projects-display/huddle-dev-quest-showcase-desktop.png",
+      "displayTablet": "/src/assets/projects-display/huddle-dev-quest-showcase-tablet.png",
+      "displayMobile": "/src/assets/projects-display/huddle-dev-quest-showcase-mobile.png",
+      "displayQrCode": "/src/assets/projects-display/huddle-dev-quest-showcase-qrcode.png"
+    }
+  },
+  {
+    "id": "dragdrop",
+    "name": "Sistema Drag&Drop",
+    "description": "Efeito de pegar, levar e soltar um elemento tanto com o mouse quanto com o toque dentro de uma área específica.",
+    "technologies": [
+      "html", "css", "ts"
+    ],
+    "links": {
+      "direct": "https://drag-and-drop-coruja-journey-3-f9b19c.gitlab.io/",
+      "repository": "https://gitlab.com/william.al.avila/drag-and-drop-coruja-journey-3"
+    },
+    "samples": {
+      "displayDesktop": "/src/assets/projects-display/drag-and-drop-showcase-desktop.png",
+      "displayTablet": "/src/assets/projects-display/drag-and-drop-showcase-tablet.png",
+      "displayMobile": "/src/assets/projects-display/drag-and-drop-showcase-mobile.png",
+      "displayQrCode": "/src/assets/projects-display/drag-and-drop-showcase-qrcode.png"
+    }
+  }
+]

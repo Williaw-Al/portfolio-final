@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer components {
+
+  /* Componente principal do card de habilidade interativo */
+  .skill-card-interactive {
+    @apply relative h-[150px] w-[150px] sm:h-[220px] sm:w-[220px] rounded-full flex justify-center items-center;
+  }
+
+  /* O ponto branco que encolhe */
+  .skill-shrinking-dot {
+    @apply absolute animate-spin bottom-1/2 right-1/2 translate-1/2 h-3 w-3 bg-(--color-light-extra) transition-all duration-300;
+  }
+
+  /* O conteúdo que se expande para mostrar o ícone */
+  .skill-expanding-content {
+    @apply overflow-hidden h-0 w-0 flex flex-col justify-center items-center gap-1.5 p-1 text-center transition-all duration-300 rounded-full border-3 border-(--color-light-extra) bg-(--color-primary);
+  }
+
+  .skill-icon {
+    @apply text-5xl sm:text-8xl;
+  }
+
+  .skill-title {
+    @apply text-xl sm:text-2xl font-medium text-(--color-accent) leading-7;
+  }
+
+  /* O popup com a descrição detalhada */
+  .skill-description-popup {
+    @apply absolute top-[190px] max-h-0 w-[310px] border-(--color-accent) rounded-xl overflow-hidden opacity-0 bg-(--color-primary) transition-[max-height] duration-300 ease-in-out pointer-events-none;
+  }
+
+  .skill-description-text {
+    @apply text-[1rem];
+  }
+
+  /* --- Estados Ativos (para serem controlados via JS) --- */
+
+  /* Efeito no ponto branco */
+  .skill-card-interactive.is-active .skill-shrinking-dot {
+    @apply h-0 w-0;
+  }
+
+  /* Efeito no conteúdo que expande */
+  .skill-card-interactive.is-active .skill-expanding-content {
+    @apply h-full w-full;
+  }
+
+  /* Efeito no popup de descrição */
+  .skill-card-interactive.is-active .skill-description-popup {
+    @apply z-[2] group-hover:max-h-[200px] group-hover:py-2 group-hover:px-4 group-hover:border-2 group-hover:opacity-100;
+  }
+
+  .footer-socials-icons {
+    @apply flex gap-7 text-center text-2xl transition-all duration-300;
+  }
+
+  .header-nav-section {
+    @apply lg:pr-5 lg:border-dashed lg:border-r-2 lg:border-[var(--color-bold-extra)];
+  }
+
+  .header-a {
+    @apply flex gap-5 rounded-xl p-1 bg-[var(--color-bold-extra)] active:bg-[var(--color-active)] transition-all duration-200 lg:bg-transparent lg:active:bg-transparent;
+  }
+
+  .header-icon-container {
+    @apply w-12 group-hover:-translate-y-1 transition-all duration-200 ease-in-out;
+  }
+
+  .header-hamburger-text {
+    @apply self-end lg:hidden;
+  }
+
+  #project-showcase,
+  #project-others {
+    @apply bg-(--color-textarea);
+  }
+
+  #project-showcase.is-active,
+  #project-others.is-active {
+    @apply bg-(--color-active) text-shadow-[2px_2px_var(--color-bold-extra)] inset-shadow-[2px_2px_4px_var(--color-light-extra)];
+  }
+
+  .project-item {
+    @apply block p-3 hover:px-1 active:px-1 cursor-pointer text-lg hover:bg-(--color-accent) hover:text-(--color-primary) hover:font-bold active:font-bold active:bg-(--color-active) transition-all duration-100 ease-in-out;
+  }
+
+  .project-item.select {
+    @apply bg-(--color-accent) text-(--color-primary) font-bold px-1;
+  }
+}
+
+@theme {
+  --animate-float: float 1.5s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}

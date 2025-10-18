@@ -19,235 +19,596 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
+  <link rel="stylesheet" href="src/css/variables.css" />
   <link rel="stylesheet" href="src/css/font-awesome.css" />
-  <link rel="stylesheet" href="src/css/reset.css" />
 
   <!-- Global -->
   <link rel="stylesheet" href="src/css/global.css" />
-  <link rel="stylesheet" href="src/css/variables.css" />
-  <link rel="stylesheet" href="src/css/sections/header.css" />
-  <link rel="stylesheet" href="src/css/sections/home.css" />
-  <link rel="stylesheet" href="./src/css/sections/mochila.css">
-  <link rel="stylesheet" href="src/css/sections/about.css" />
-  <link rel="stylesheet" href="src/css/sections/skills.css" />
-  <link rel="stylesheet" href="src/css/sections/projects.css" />
-  <link rel="stylesheet" href="src/css/sections/footer.css" />
+  <link rel="stylesheet" href="src/css/hamburger.css" />
+  <link rel="stylesheet" href="src/css/home-animated-text.css">
+
+
+  <!--Tailwind-->
+  <link href="./src/output.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
 </head>
 
-<body>
+<body class="mt-[60px]">
 
   <!--MARK: Header-->
-  <header class="header nav-down">
-    <div class="container">
-      <div class="row justify-content-between align-items-center">
-        <a href="#">
-          <h1 class="logo">WA</h1>
+  <header
+    class="py-2 bg-(--color-light-extra) fixed z-[900] w-full top-0 [text-shadow:2px_2px_black] border-b-4 border-[var(--color-bold-extra)] shadow-[0_2px_2px_2px_rgba(0,0,0,0.25)]">
+    <div class="container mx-auto px-5">
+      <div class="flex justify-between items-center">
+        <a href="#" class="w-12 rounded-xl overflow-hidden group border-3 border-(--color-secondary)
+          transition-all duration-200 ease-in-out hover:scale-110 hover:border-0
+          active:scale-110 active:border-0 focus:border-(--color-accent)">
+          <div class="w-full h-full">
+            <img src="/src/assets/logo-portfolio.webp" alt="Logo" class="w-full hover:scale-125">
+          </div>
         </a>
-        <nav>
-          <input id="menu-hamburguer" type="checkbox" />
 
-          <label for="menu-hamburguer">
-            <div class="menu">
+        <div class="z-[999] absolute bottom-1/2 right-1/2 translate-1/2">
+          <div id="coruja" class="fixed bottom-96 w-5 h-5
+          transition-all duration-300">
+            <div class="w-[100px] absolute bottom-1/2 right-1/2 translate-1/2">
+              <img src="/src/assets/coruja-header-back.webp" alt="Coruja">
+            </div>
+            <div class="w-[100px] absolute bottom-1/2 right-1/2 translate-1/2">
+              <img src="/src/assets/coruja-header-front.webp" alt="Coruja">
+            </div>
+            <div id="eye-container" class="w-[65px] h-[25px] absolute top-[16px] right-1/2 translate-x-1/2">
+              <img id="pupil" src="/src/assets/coruja-olhos.png" alt="Coruja"
+                class="w-[42px] translate-x-[var(--pupil-translate-x)] translate-y-[var(--pupil-translate-y)]">
+            </div>
+          </div>
+        </div>
+
+        <nav class="relative z-5">
+          <input id="menu-hamburguer" type="checkbox" class="peer" hidden />
+
+          <label for="menu-hamburguer" class="flex flex-col cursor-pointer">
+            <div class="block w-[60px] h-[60px] self-end lg:hidden">
               <span class="hamburguer"></span>
             </div>
           </label>
-          <ul>
-            <li><a href="#sobre-mim">Sobre mim</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#projetos">Meus projetos</a></li>
+          <ul class="absolute top-full w-[300px] -right-2 px-2 py-4 hidden peer-checked:flex flex-col gap-4 bg-(--color-primary) rounded-xl
+          lg:static lg:w-fit lg:flex lg:flex-row lg:gap-5 lg:bg-transparent lg:p-0 lg:border-none">
+            <li class="header-nav-section">
+              <a href="#sobre-mim" data-title="Sobre Mim" class="header-a group">
+                <div class="header-icon-container">
+                  <img src="/src/assets/header-about-icon.png" alt="Ícone Sobre mim">
+                </div>
+                <span class="header-hamburger-text">Sobre Mim</span>
+              </a>
+            </li>
+
+            <li class="header-nav-section"><a href="#habilidades" data-title="Habilidades" class="header-a group">
+                <div class="header-icon-container">
+                  <img src="/src/assets/header-skills-icon.png" alt="Ícone Sobre mim">
+                </div>
+                <span class="header-hamburger-text">Habilidades</span>
+              </a></li>
+
+            <li class="header-nav-section"><a href="#projetos" data-title="Meus Projetos" class="header-a group">
+                <div class="header-icon-container">
+                  <img src="/src/assets/header-projects-icon.png" alt="Ícone Sobre mim">
+                </div>
+                <span class="header-hamburger-text">Projetos</span>
+              </a></li>
+
+            <li class="header-nav-section border-r-0 pr-0"><a href="#contact" data-title="Entre em contato"
+                class="header-a group">
+                <div class="header-icon-container">
+                  <img src="/src/assets/header-projects-icon.png" alt="Ícone Contato">
+                </div>
+                <span class="header-hamburger-text">Contato</span>
+              </a></li>
           </ul>
+          <div id="nav-title-display" class="hidden lg:flex absolute top-[65px] left-0 w-full bg-(--color-primary) text-center transition-opacity duration-300 opacity-0 pointer-events-none h-[40px] items-center justify-center rounded-md
+          shadow-[0_0_0_2px_var(--color-accent),_0_0_0_4px_var(--color-secondary)]"></div>
         </nav>
+
       </div>
     </div>
+
+    <div id="progress-bar"
+      class="absolute -bottom-3 -left-0.5 h-3 bg-(--color-accent) shadow-[1px_1px_0_1px_var(--color-primary)]"></div>
   </header>
 
-  <!--MARK: Home-->
-  <section class="home main">
-    <div class="full-screen row justify-content-between align-items-center">
-      <div class="triangulo"></div>
-      <div class="texto-home">
-        <p>Oi!</p>
-        <h1>Eu sou <span class="nome">William Alexander</span class="nome"></h1>
-        <h2>&#60;desenvolvedor-frontend-junior/&#62;</h2>
-      </div>
-      <div class="img-home">
-        <div class="img-box">
-          <img src="src/images/mochtest.png" alt="foto do perfil" />
-          <div class="mochila">
-            <a href="https://www.linkedin.com/in/william-al-avila/" title="Ir para o LinkedIn" target="_blank"
-              class="linkedin">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://wa.me/5555991298970" title="Enviar Mensagem no WhatsApp" target="_blank"" class=" whats">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://github.com/Williaw-Al" title="Ir para o GitHub" target="_blank" class="git">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/williawawa" title="Ir para o Instagram" target="_blank" class="insta">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <div class="espada">
-              <img src="./src/images/espada.png">
+  <main class="flex flex-col items-center">
+    <!--MARK: Home-->
+    <section class="bg-(--color-light-extra) w-full">
+      <div class="p-12 relative gap-10 flex flex-col justify-center items-center
+    lg:flex-row lg:min-h-[80svh]">
+        <div class="2xl:max-w-[1000px] tracking-[1px] text-(--color-primary) text-center lg:text-start">
+          <h1 class="2xl:text-7xl">Bem vindo ao portfólio de <strong
+              class="max-[410px]:text-2xl text-nowrap uppercase text-4xl 2xl:text-7xl">William Alexander</strong></h1>
+          <h2 class="max-[410px]:text-sm font-(family-name:--fonte-extra) text-lg mt-5 2xl:text-4xl">
+            &#60;desenvolvedor-<span id="dev-text" class="block lg:inline text-(--color-accent)">frontend</span>/&#62;
+          </h2>
+
+          <ul class="flex justify-between w-full mt-10 lg:w-[300px]">
+            <li class="w-14 h-14 text-4xl/relaxed border-2 text-center rounded-xl text-blue-600 transition-all duration-200
+          hover:text-white hover:border-none hover:bg-blue-600 hover:text-5xl/tight
+          active:text-white active:border-none active:bg-blue-600 active:text-5xl/tight">
+              <a class="w-full h-full"
+                href="https://www.linkedin.com/in/william-al-avila/" title="Ir para o LinkedIn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li class="w-14 h-14 text-4xl/relaxed border-2 text-center rounded-xl text-green-600 transition-all duration-200
+          hover:text-white hover:border-none hover:bg-green-600 hover:text-5xl/tight
+          active:text-white active:border-none active:bg-green-600 active:text-5xl/tight">
+              <a class="w-full h-full"
+                href="https://wa.me/5555991298970" title="Enviar Mensagem no WhatsApp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </li>
+            <li class="w-14 h-14 text-4xl/relaxed border-2 text-center rounded-xl text-gray-200 transition-all duration-200
+          hover:text-gray-800 hover:border-none hover:bg-gray-200 hover:text-5xl/tight
+          active:text-gray-800 active:border-none active:bg-gray-200 active:text-5xl/tight">
+              <a class="w-full h-full"
+                href="https://github.com/Williaw-Al" title="Ir para o GitHub" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li class="w-14 h-14 text-4xl/relaxed border-2 text-center rounded-xl text-pink-800 transition-all duration-200
+          hover:text-white hover:border-none hover:bg-pink-800 hover:text-5xl/tight
+          active:text-white active:border-none active:bg-pink-800 active:text-5xl/tight">
+              <a class="w-full h-full"
+                href="https://www.instagram.com/williawawa" title="Ir para o Instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+
+        <div class="mt-10 text-xl hover:text-(--color-accent)">
+          <a href="https://docs.google.com/document/d/e/2PACX-1vTWkBdXVvVJFPmZgPsJYspvF-j-KI61UFSKDGWQfty4nX_TgyE3SbfdS5yB-7z1bsiixJpaKciOzHNi/pub" target="_blank">
+            <i class="fas fa-file-alt"></i>
+            <span>Acesse o meu currículo!</span>
+          </a>
+        </div>
+
+        </div>
+
+        <div id="coruja-owl" class="relative flex-none w-[300px] h-[500px] self-center lg:-translate-y-5"
+          title="Corpão do Coruja">
+
+          <div class="absolute w-[250px] h-[50px] top-[350px] right-1/2 translate-x-1/2">
+            <img class="w-full" src="/src/assets/coruja-home/coruja-stand-base.svg" alt="Base">
+          </div>
+
+          <div class="absolute inset-0 animate-[float_8s_ease-in-out_infinite]">
+            <img src="/src/assets/coruja-home/coruja-stand-cloak.svg" alt="Coruja Capa" class="w-full">
+          </div>
+          <div class="absolute inset-0 animate-[float_4s_ease-in-out_infinite]">
+            <img src="/src/assets/coruja-home/coruja-stand-arms.svg" alt="Coruja Braços" class="w-full">
+          </div>
+          <div class="absolute inset-0 animate-[float_3s_ease-in-out_infinite]">
+            <img src="/src/assets/coruja-home/coruja-stand-book.svg" alt="Coruja Livro" class="w-full">
+          </div>
+          <div class="absolute inset-0 animate-[float_3s_ease-in-out_infinite]">
+            <img src="/src/assets/coruja-home/coruja-stand-body.svg" alt="Coruja Corpo" class="w-full">
+          </div>
+          <div class="absolute inset-0 animate-[float_3s_ease-in-out_infinite]">
+            <img src="/src/assets/coruja-home/coruja-stand-head.svg" alt="Coruja Cabeça" class="w-full">
+          </div>
+          <div class="absolute inset-0 animate-[float_2s_ease-in-out_infinite]">
+            <img src="/src/assets/coruja-home/coruja-stand-face.svg" alt="Coruja Face" class="w-full">
+            <div id="eye-container-home" class=" w-[100px] h-[50px] absolute top-[80px] right-1/2 translate-x-1/2">
+              <img id="pupil-home" src="/src/assets/coruja-olhos.png" alt="Coruja" class="w-[70px]">
             </div>
           </div>
+          <div class="absolute inset-0">
+            <img src="/src/assets/coruja-home/coruja-stand-legs.svg" alt="Coruja Pernas" class="w-full">
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!--MARK: About-->
-  <section class="sobre-mim main section" id="sobre-mim">
-    <div class="row justify-content-between">
-      <div class="imagem-sobre-mim">
-        <img src="./src/images/sobre-mim-foto.png" alt="Foto de frente perfil">
+    <!--MARK: About-->
+    <section id="sobre-mim"
+      class="scroll-mt-48 w-4/5 my-40 transition-all duration-500 ease-in-out overflow-hidden lg:max-h-[1000px] opacity-100">
+      <div class="relative flex flex-col lg:flex-row justify-between items-center lg:items-start
+    border-[20px] border-t-[40px] border-transparent [border-image:url(/src/assets/about-border-image.png)_44_round]
+    bg-(--color-primary) rounded-4xl">
+        <div class="w-full lg:w-2/5 px-12 self-center">
+          <img class="about-photo [border:inset_10px_solid_transparent] rounded-full" src="./src/assets/images/sobre-mim-foto.png"
+            alt="Foto de perfil">
+        </div>
+        <div class="w-full lg:w-3/5 p-4 flex flex-col justify-evenly">
+          <h2 class="py-6 text-4xl text-(--color-accent)">Sobre Mim_</h2>
+          <div class="self-center bg-(--color-textarea) shadow-xl rounded-lg p-6 w-full font-mono text-lg lg:text-sm">
+            <pre
+              class="about-text-box focus:outline-none whitespace-pre-wrap leading-normal w-full max-h-[200px] lg:max-h-[300px] overflow-y-scroll"
+              contenteditable="true">
+> Eae povo! Me chamo William Alexander e sou um amante da programação.
+>
+> Tenho paixão por resolver desafios complexos de maneira criativa, principalmente ao trabalhar com barreiras e limites definidos. Sou comprometido, trabalhando bem tanto de forma independente quanto em equipe.
+>
+> Estou constantemente aprendendo e aprimorando minhas habilidades para me tornar um colaborador eficaz e eficiente, tendo impacto positivo com quem for trabalhar.
+> Sonho um dia em criar meu próprio Shadow of The Colossus, quem sabe 🙌🏽.</pre>
+          </div>
+        </div>
+
+        <div id="about-restore-button" title="Minimizar" class="absolute group z-10 -top-8 right-5
+        hover:cursor-pointer">
+          <div class="absolute w-5 h-5 border-2 border-(--color-light-extra) group-hover:border-(--color-accent) group-active:border-(--color-active) top-0 left-0/2"></div>
+          <div class="absolute w-5 h-5 border-2 border-(--color-light-extra) group-hover:border-(--color-accent) group-active:border-(--color-active) top-2 -right-3 "></div>
+        </div>
+
       </div>
-      <div class="textos-about">
-        <h2>Sobre Mim_</h2>
-        <div class="informacoes-sobre-mim">
-          <p><strong>Eae povo! Me chamo William Alexander e sou um amante da programação 💻.</strong></p>
-          <p>
-            Tenho paixão por resolver desafios complexos de maneira criativa, principalmente ao trabalhar com barreiras
-            e limites definidos. 
-          </p>
-            <p>Estou constantemente aprendendo e aprimorando minhas habilidades para me tornar um colaborador eficaz e eficiente,
-            que gere impacto positivo no trabalho.
-          <p>
-            Sonho um dia em criar meu próprio Shadow of The Colossus, quem sabe 🙌🏽.
-          </p>
-        </div>
+
+    </section>
+
+    <a href="#sobre-mim" id="about-maximize-button" title="Maximizar"
+      class="fixed group right-6 w-36 h-14 bg-(--color-book-light) rounded-t-4xl border-4 border-(--color-book-dark) -bottom-[100px] transition-all duration-300 hover:cursor-pointer z-[70]">
+      <div
+        class="absolute w-8 h-8 border-5 border-(--color-light-extra) group-hover:border-(--color-accent) group-active:border-(--color-active) bottom-1/2 right-1/2 translate-1/2">
       </div>
-    </div>
-  </section>
+    </a>
 
-  <!--MARK: Skills-->
-  <div class="fundo-extra">
-    <section class="habilidades main section" id="habilidades">
-      <div class="grid">
-        <h2 class="texto-vertical blank1">Habilidades</h2>
+    <!--MARK: Skills-->
+    <div id="show-skills" class="h-20 w-20"></div>
 
-        <div class="informacoes html skill1">
-          <div class="logo">
-            <i class="devicon devicon-html5-plain-wordmark" id="html"></i>
+    <section class="scroll-mt-24 relative bg-(--color-primary) h-fit"
+      id="habilidades">
+      <div class="absolute -top-[100px] left-0 w-full h-[100px] bg-gradient-to-b from-(--color-book-dark)/0 to-(--color-primary)"></div>
+
+      <div class="skill-section-show flex flex-col items-center overflow-hidden pb-28 max-h-0 transition-all duration-10000 ease-in-out">
+        <h2 class="text-4xl uppercase mt-16">Habilidades</h2>
+
+        <div id="skills-container" class="flex flex-row flex-wrap justify-center sm:gap-8 mt-8 invisible">
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+                <i class="devicon devicon-html5-plain-wordmark" id="html"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">HTML5</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">Conceitos básicos; semântica; links externos e internos; tags; tabela;
+                input; organização;
+                button;
+                favicon; emojis; iframes.</p>
+            </div>
+
           </div>
-          <div class="texto-skill">
-            <h3>HTML5</h3>
-            <p>Conceitos básicos; semântica; links externos e internos; tags; tabela; input; organização; button;
-              favicon; emojis; iframes.</p>
+
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+                <i class="devicon devicon-css3-plain-wordmark" id="css"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">CSS3</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">Efeito cascata; estrutura; media queries; modelo de caixa; ids e
+                classes;
+                especificidade; fontes; background; position; pseudo-classes; seletores; variáveis; flexbox; grid.</p>
+            </div>
           </div>
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+                <i class="devicon devicon-javascript-plain" id="javascript"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">JavaScript</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">Variáveis; depuração; lógica; funções; hoisting; arrays; objetos;
+                manipulação DOM; eventos; spread; rest; filter; map; reduce; assíncrono; fetch; API; JSON.</p>
+            </div>
+          </div>
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+                <i class="devicon devicon-typescript-plain" id="typecript"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">TypeScript</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">Tipagem explícita e inferência de tipo; verificação; tuplas; enums; any;
+                unions; type aliases; interfaces; generics; TSconfig.</p>
+            </div>
+          </div>
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+                <i class="devicon devicon-react-plain-wordmark" id="reactjs"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">ReactJS</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">JSX; Vite; componentes; props; listas; eventos; arrow function;
+                stateless
+                e statefull; ciclo de vida; hooks; rotas; styled-components; bibliotecas.</p>
+            </div>
+          </div>
+
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+                <i class="devicon devicon-postgresql-plain-wordmark" id="postgresql"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">PostgreSQL</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">Banco de dados relacional SQL; planilhas; chave e valor; manipulação de
+                dados; CRUD; linha de comando; NoSQL.</p>
+            </div>
+          </div>
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+                <i class="devicon-dbeaver-plain" id="dbeaver"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">DBeaver</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">Interface gráfica; estrutura de um database; tabela; chave primária e
+                estrangeira; tipos de dados; operadores lógicos; prática CRUD.</p>
+            </div>
+          </div>
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+
+                <i class="devicon-nodejs-plain" id="nodejs"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">NodeJS</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">Gerenciamento de pacotes; versionamento; JSON; Frontend e Backend;
+                módulos; npm; terminal; linhas de comando.</p>
+            </div>
+          </div>
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+                <i class="devicon devicon-github-original" id="github"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">GitHub</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">Versionamento; repositórios; interface; participação; git ignore; git
+                clone; push; add; github pages.</p>
+            </div>
+          </div>
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+                <i class="devicon devicon-git-plain" id="git"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">Git</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">Terminal; interface; git bash; vs code; estado dos arquivos.</p>
+            </div>
+          </div>
+
+          <div class="skill-card-interactive group">
+            <div class="skill-shrinking-dot"></div>
+            <div class="skill-expanding-content">
+              <div class="skill-icon">
+
+                <i class="devicon-figma-plain" id="figma"></i>
+              </div>
+              <div>
+                <h3 class="skill-title">Figma</h3>
+              </div>
+            </div>
+            <div class="skill-description-popup">
+              <p class="skill-description-text">Interface; buscar elementos; pegar dados de estilização; baixar
+                elementos;
+                visão holística.</p>
+            </div>
+          </div>
+
         </div>
 
-        <div class="informacoes css skill2">
-          <div class="logo">
-            <i class="devicon devicon-css3-plain-wordmark" id="css"></i>
-          </div>
-          <div class="texto-skill">
-            <h3>CSS3</h3>
-            <p>Efeito cascata; estrutura; media queries; modelo de caixa; ids e classes; especificidade; fontes;
-              background; position; pseudo-classes; seletores; variáveis; flexbox; grid.</p>
-          </div>
-        </div>
-
-        <h2 class="texto-vertical blank2">Habilidades</h2>
-
-        <div class="informacoes github skill3">
-          <div class="logo">
-            <i class="devicon devicon-github-original" id="github"></i>
-          </div>
-          <div class="texto-skill">
-            <h3>GitHub</h3>
-            <p>Versionamento; repositórios; interface; participação; git ignore; git clone; push; add; github pages.</p>
-          </div>
-        </div>
-
-        <div class="informacoes git skill4">
-          <div class="logo">
-            <i class="devicon devicon-git-plain" id="git"></i>
-          </div>
-          <div class="texto-skill">
-            <h3>Git</h3>
-            <p>Terminal; interface; git bash; vs code; estado dos arquivos.</p>
-          </div>
-        </div>
-
-        <h2 class="texto-vertical blank3">Habilidades</h2>
       </div>
+
+      <div class="absolute -bottom-[100px] left-0 w-full h-[100px] bg-gradient-to-t from-(--color-book-dark)/0 to-(--color-primary)"></div>
     </section>
 
     <!--MARK: Projects-->
-    <div class="divisao main">
-      <h2>PROJETOS</h2>
-    </div>
-    <section class="projetos main section" id="projetos">
-      <div class="container-projetos">
-        <div class="projeto">
-          <a href="https://github.com/Williaw-Al/exercicios-html-css-basico" target="_blank">
-            <img src="./src/images/projeto-1.png" alt="Compilado exercícios" />
-            <h3>Compilado de atividades</h3>
-            <div class="informacoes-projeto">
-              <p>html5 | css3</p>
-              <p>Uma landing page, contendo atividades realizadas no curso DevQuest.</p>
-              <p>🔗 Ver no GitHub Pages</p>
-            </div>
-          </a>
+    <section class="scroll-mt-24 mt-5 mb-20" id="projetos">
+      <div class="mt-[200px] flex flex-col items-center">
+        <div class="mb-20">
+          <h2 class="text-(--color-primary) text-shadow-[4px_4px_1px_var(--color-secondary)] text-4xl font-(family-name:--fonte-extra)">PROJETOS</h2>
         </div>
-        <div class="projeto">
-          <a href="https://github.com/Williaw-Al/desafio-1-huddle-dev-quest" target="_blank">
-            <img src="./src/images/projeto-2.png" alt="Desafios" />
-            <h3>Desafios</h3>
-            <div class="informacoes-projeto">
-              <p>html5 | css3</p>
-              <p>A ideia é possuir um compilado de desafios, realizados por todo canto da internet.</p>
-              <p>🔗 Ver no GitHub Pages</p>
+
+        <div class="flex flex-col px-2 lg:flex-row justify-center items-center lg:items-start gap-x-20 w-full">
+          <div
+            class="border-[10px] w-[300px] min-[425px]:w-[410px] max-h-fit border-transparent [border-image:url(/src/assets/projects-border-image.png)_32_round] rounded-xl bg-(--color-textarea) mb-3">
+            <div id="list-header-projects" class="relative w-[235px] font-(family-name:--fonte-secundaria) font-extrabold uppercase">
+              <div id="project-showcase" class="absolute -top-11 left-0 z-1 is-active cursor-pointer
+          w-36 p-1 px-3 border-3 border-b-0 rounded-tr-full border-(--color-accent) hover:bg-(--color-accent) active:bg-(--color-active)
+          transition-all duration-200">
+                <h3 class="text-xl">Vitrine</h3>
+              </div>
+              <div id="project-others" class="absolute -top-11 right-0 text-end cursor-pointer
+          w-36 p-1 px-3 border-3 border-b-0 rounded-tl-full border-(--color-accent) hover:bg-(--color-accent) active:bg-(--color-active)
+          transition-all duration-150">
+                <h3 class="text-xl">Outros</h3>
+              </div>
             </div>
-          </a>
-        </div>
-        <div class="projeto">
-          <a href="https://github.com/Williaw-Al/portfolio-final" target="_blank">
-            <img src="./src/images/projeto-3.png" alt="Portfólio 0.1" />
-            <h3>Portfólio 0.1</h3>
-            <div class="informacoes-projeto">
-              <p>html5 | css3 | js</p>
-              <p>Esta página que vê agora.</p>
-              <p>🔗 Ver no GitHub Pages</p>
+
+            <div>
+              <p class="text-center text-sm bg-(--color-bold-extra)">Selecione uma opção:</p>
+              <ul id="showcase-projects-list" class="h-[100px] overflow-y-scroll sm:h-fit sm:overflow-y-auto text-(--color-secondary)"></ul>
             </div>
-          </a>
+          </div>
+
+          <div class="flex flex-col justify-center items-center">
+            <div class="relative w-[300px] h-[199px] min-[425px]:w-[400px] min-[425px]:h-[265px] pointer-events-none">
+              <div class="absolute top-0 left-0 z-0">
+                <img src="/src/assets/projects-display/projects-display-desktop.png" alt="Display projeto desktop">
+              </div>
+              <div class="display-desktop absolute top-[32px] right-[48px] z-10 bg-(--color-primary) w-[153px] h-[94px] overflow-hidden
+               min-[425px]:top-[43px] min-[425px]:right-[64px] min-[425px]:w-[204px] min-[425px]:h-[124px]">
+              </div>
+              <div class="absolute top-0 left-0 z-20">
+                <img src="/src/assets/projects-display/projects-display-tablet.png" alt="Display projeto tablet">
+              </div>
+              <div class="display-tablet absolute top-[64px] left-[17px] z-30 bg-(--color-primary) w-[86px] h-[99px] overflow-hidden
+              min-[425px]:top-[85px] min-[425px]:left-[22px] min-[425px]:w-[116px] min-[425px]:h-[132px]">
+              </div>
+              <div class="absolute top-0 left-0 z-40">
+                <img src="/src/assets/projects-display/projects-display-mobile.png" alt="Display projeto mobile">
+              </div>
+              <div class="display-mobile absolute bottom-[23px] left-[92px] z-50 bg-(--color-primary) w-[46px] h-[71px] overflow-hidden
+              min-[425px]:bottom-[30px] min-[425px]:left-[123px] min-[425px]:w-[61px] min-[425px]:h-[96px]">
+              </div>
+
+              <div
+                class="hidden group md:block absolute top-0 right-5 lg:-top-[50px] lg:right-5 w-[100px] h-[100px] z-[60] pointer-events-auto hover:h-[300px] hover:w-[300px]">
+                <div class="display-qrcode size-full"></div>
+              </div>
+
+            </div>
+            <div
+              class="project-description hidden w-full min-[425px]:w-[400px] max-h-[320px] p-2 py-5 rounded-xl bg-(--color-primary) transition-all duration-300 ease-in-out">
+            </div>
+          </div>
+
         </div>
       </div>
+
     </section>
-  </div>
+  </main>
 
   <!--MARK: Footer-->
-  <footer class="footer">
-    <div class="container">
-      <h2>Me envie uma mensagem!</h2>
-      <ul class="redesociais">
-        <li>
-          <a href="https://www.linkedin.com/in/william-al-avila/" title="Ir para o LinkedIn" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </li>
+  <footer class="scroll-mt-24 mt-5 min-h-[400px] text-center bg-(--color-light-extra) flex flex-col gap-7 justify-between text-(--color-primary)"
+    id="contact">
+    <div class="flex flex-col md:flex-row justify-around items-center md:items-start mt-5 gap-y-5">
+      <div class="socials mb-12">
+        <h2 class="font-(family-name:--fonte-secundaria) text-xl font-bold mb-5">Minhas redes sociais:</h2>
+        <ul class="flex flex-col justify-center items-center gap-5">
+          <li class="w-36">
+            <a href="https://www.linkedin.com/in/william-al-avila/" title="Ir para o LinkedIn" target="_blank" class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
+              <i class="fab fa-linkedin-in group-hover:scale-140"></i>
+              <span class="text-xl">Linkedin</span>
+            </a>
+          </li>
 
-        <li>
-          <a href="https://wa.me/5555991298970" title="Enviar Mensagem no WhatsApp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </li>
+          <li class="w-36">
+            <a href="https://wa.me/5555991298970" title="Enviar Mensagem no WhatsApp" target="_blank" class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
+              <i class="fab fa-whatsapp group-hover:scale-140"></i>
+              <span class="text-xl">WhatsApp</span>
+            </a>
+          </li>
 
-        <li>
-          <a href="https://github.com/Williaw-Al" title="Ir para o GitHub" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
+          <li class="w-36">
+            <a href="https://github.com/Williaw-Al" title="Ir para o GitHub" target="_blank" class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
+              <i class="fab fa-github group-hover:scale-140"></i>
+              <span class="text-xl">GitHub</span>
+            </a>
+          </li>
 
-        <li>
-          <a href="https://www.instagram.com/williawawa" title="Ir para o Instagram" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-      </ul>
+          <li class="w-36">
+            <a href="https://www.instagram.com/williawawa" title="Ir para o Instagram" target="_blank" class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
+              <i class="fab fa-instagram group-hover:scale-140"></i>
+              <span class="text-xl">Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="formulario w-full px-5 md:w-[400px]">
+        <h2 class="font-(family-name:--fonte-secundaria) text-xl font-bold mb-5">Mande uma mensagem:</h2>
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm"
+          class="flex flex-col gap-3 bg-(--color-primary) p-5 rounded-xl text-[12px] text-(--color-light-extra) shadow-lg">
+
+          <input type="hidden" name="access_key" value="bed73c46-1789-4356-99c9-dcd3dadba4e2">
+          <!-- Optional: Can be type="hidden" or type="text" for subject -->
+          <input type="hidden" name="subject" value="New Submission from Web3Forms">
+          <!-- Optional: From Name you want to see in the email
+          Default is "Notifications". you can overwrite here -->
+          <input type="hidden" name="from_name" value="Your Website Name">
+
+          <!-- Add your form fields here -->
+          <label for="name" class="font-medium">Digite seu Nome *</label>
+          <input id="name" name="name" type="text" placeholder="Tom Cruise, Giselle Knowles..." required
+            class="bg-(--color-textarea) border border-(--color-secondary) rounded-lg px-3 py-2 focus:border-(--color-accent) focus:ring-1 focus:ring-(--color-accent) placeholder-(--color-secondary) outline-none transition-all duration-200">
+
+            <label for="email" class="font-medium">Seu email para contato *</label>
+            <input type="email" name="email" id="email" placeholder="eu@email.com" required
+              class="bg-(--color-textarea) border border-(--color-secondary) rounded-lg px-3 py-2 focus:border-(--color-accent) focus:ring-1 focus:ring-(--color-accent) placeholder-(--color-secondary) outline-none transition-all duration-200">
+
+          <label for="subject" class="font-medium">Assunto (opcional)</label>
+          <input type="text" name="subject" id="subject" placeholder="Trabalho, Landing page..."
+            class="bg-(--color-textarea) border border-(--color-secondary) rounded-lg px-3 py-2 focus:border-(--color-accent) focus:ring-1 focus:ring-(--color-accent) placeholder-(--color-secondary) outline-none transition-all duration-200">
+
+
+          <textarea id="message" name="message"
+            placeholder="Porque Tom Cruise e Beyoncé?, Qual o nome da coruja que fica me observando?..." required
+            class="bg-(--color-textarea) border border-(--color-secondary) rounded-lg px-3 py-2 h-28 resize-none focus:border-(--color-accent) focus:ring-1 focus:ring-(--color-accent) placeholder-(--color-secondary) outline-none transition-all duration-200 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900"></textarea>
+
+          <button type="submit"
+            class="mt-2 cursor-pointer bg-(--color-accent) text-(--color-primary) font-semibold py-2 rounded-lg transition-all duration-200 hover:bg-(--color-active) active:scale-[0.98] focus:ring-2 focus:ring-(--color-accent) focus:ring-offset-2 focus:ring-offset-(--color-bold-extra)">Submit
+            Form</button>
+
+        </form>
+
+        <div id="formMessage"
+          class="hidden fixed right-1/2 bottom-1/2 translate-1/2 b-white p-[18px] rounded-lg [box-shadow:0 10px 30px rgba(0,0,0,0.15)]">
+          <span id="formMessageText"></span>
+          <button id="formMessageClose" class="ml-3">Fechar</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="bg-(--color-primary) text-(--color-secondary)">
+      <p class="text-xl mb-2">Site feito por William Alexander - <a href="/LICENSE.md" target="_blank" class="text-(--color-light-extra) hover:text-(--color-accent) active:text-(--color-active) text-nowrap">Licença MIT</a></p>
+      <p class="text-sm text-(--color-accent)">2025</p>
     </div>
   </footer>
 

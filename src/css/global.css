@@ -1,27 +1,40 @@
+:root {
+  --color-primary: #050017;
+  --color-secondary: #948D9A;
+  --color-accent: #FF7800;
+  --color-book-light: #9D309D;
+  --color-book-dark: #610061;
+
+  --color-light-extra: #b7b7f1;
+  --color-bold-extra: #373339;
+
+  --color-active: #EE9900;
+  --color-textarea: #14012c;
+}
+
 html {
-  font-size: 62.5%;
-  color: var(--cor-branca);
+  color: var(--color-light-extra);
   font-weight: 300;
   scroll-behavior: smooth;
 }
 
 body {
-  background: url(../images/fundo-pagina.png) fixed;
+  /* background: url(../images/fundo-pagina.png) fixed; */
   font-family: var(--fonte-primaria);
   font-size: var(--fonte-normal);
-  padding-top: 80px;
+  /* padding-top: 80px; */
 }
 
-.main {
+/* .main {
   max-width: 1440px;
   margin: auto;
-}
+} */
 
-.section {
+/* .section {
   padding: 7rem 0 7rem;
-}
+} */
 
-.row {
+/*.row {
   display: flex;
   flex-wrap: wrap;
 }
@@ -32,4 +45,4 @@ body {
 
 .align-items-center {
   align-items: center;
-}
+}*/
