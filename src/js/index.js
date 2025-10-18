@@ -310,7 +310,7 @@ function displayProject(e) {
 }
 
 async function getShowcaseProjects() {
-  const response = await fetch('showcase-projects.json')
+  const response = await fetch('../../showcase-projects.json')
   const data = await response.json()
   return data
 }
