@@ -88,6 +88,14 @@
   .project-item.select {
     @apply bg-(--color-accent) text-(--color-primary) font-bold px-1;
   }
+
+  .border-image-about {
+    border-image: url(assets/about-border-image.png) 44 round;
+  }
+
+  .border-image-projects {
+    border-image: url(assets/projects-border-image.png) 32 round;
+  }
 }
 
 @theme {

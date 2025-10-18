@@ -8,7 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-orange-500: oklch(70.5% 0.213 47.604);
-    --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-cyan-500: oklch(71.5% 0.143 215.221);
@@ -1033,12 +1032,6 @@
     --tw-outline-style: none;
     outline-style: none;
   }
-  .\[border-image\:url\(\/src\/assets\/about-border-image\.png\)_44_round\] {
-    border-image: url(/src/assets/about-border-image.png) 44 round;
-  }
-  .\[border-image\:url\(\/src\/assets\/projects-border-image\.png\)_32_round\] {
-    border-image: url(/src/assets/projects-border-image.png) 32 round;
-  }
   .\[border\:inset_10px_solid_transparent\] {
     border: inset 10px solid transparent;
   }
@@ -1942,6 +1935,12 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-primary);
+  }
+  .border-image-about {
+    border-image: url(assets/about-border-image.png) 44 round;
+  }
+  .border-image-projects {
+    border-image: url(assets/projects-border-image.png) 32 round;
   }
 }
 @keyframes float {
