@@ -150,9 +150,9 @@ const aboutPhoto = document.querySelector('.about-photo');
 
 aboutTextBox.addEventListener('input', () => {
   if (aboutTextBox.textContent.trim() != aboutTextDefault.trim()) {
-    aboutPhoto.src = '/src/assets/images/sobre-mim-foto-alt.png'
+    aboutPhoto.src = 'src/assets/images/sobre-mim-foto-alt.png'
   } else {
-    aboutPhoto.src = '/src/assets/images/sobre-mim-foto.png'
+    aboutPhoto.src = 'src/assets/images/sobre-mim-foto.png'
   }
 })
 
