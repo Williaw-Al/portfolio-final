@@ -11,10 +11,10 @@
       "repository": "https://github.com/Williaw-Al/pokedex-quest-react"
     },
     "samples": {
-      "displayDesktop": "/src/assets/projects-display/pokedex-quest-showcase-desktop.png",
-      "displayTablet": "/src/assets/projects-display/pokedex-quest-showcase-tablet.png",
-      "displayMobile": "/src/assets/projects-display/pokedex-quest-showcase-mobile.png",
-      "displayQrCode": "/src/assets/projects-display/pokedex-quest-showcase-qrcode.png"
+      "displayDesktop": "src/assets/projects-display/pokedex-quest-showcase-desktop.png",
+      "displayTablet": "src/assets/projects-display/pokedex-quest-showcase-tablet.png",
+      "displayMobile": "src/assets/projects-display/pokedex-quest-showcase-mobile.png",
+      "displayQrCode": "src/assets/projects-display/pokedex-quest-showcase-qrcode.png"
     }
   },
   {
@@ -29,10 +29,10 @@
       "repository": "https://github.com/Williaw-Al/responsive-result-summary-fetch-json-tailwind"
     },
     "samples": {
-      "displayDesktop": "/src/assets/projects-display/result-summary-tailwind-showcase-desktop.png",
-      "displayTablet": "/src/assets/projects-display/result-summary-tailwind-showcase-tablet.png",
-      "displayMobile": "/src/assets/projects-display/result-summary-tailwind-showcase-mobile.png",
-      "displayQrCode": "/src/assets/projects-display/result-summary-tailwind-showcase-qrcode.png"
+      "displayDesktop": "src/assets/projects-display/result-summary-tailwind-showcase-desktop.png",
+      "displayTablet": "src/assets/projects-display/result-summary-tailwind-showcase-tablet.png",
+      "displayMobile": "src/assets/projects-display/result-summary-tailwind-showcase-mobile.png",
+      "displayQrCode": "src/assets/projects-display/result-summary-tailwind-showcase-qrcode.png"
     }
   },
   {
@@ -47,10 +47,10 @@
       "repository": "https://github.com/Williaw-Al/desafio-1-huddle-dev-quest"
     },
     "samples": {
-      "displayDesktop": "/src/assets/projects-display/huddle-dev-quest-showcase-desktop.png",
-      "displayTablet": "/src/assets/projects-display/huddle-dev-quest-showcase-tablet.png",
-      "displayMobile": "/src/assets/projects-display/huddle-dev-quest-showcase-mobile.png",
-      "displayQrCode": "/src/assets/projects-display/huddle-dev-quest-showcase-qrcode.png"
+      "displayDesktop": "src/assets/projects-display/huddle-dev-quest-showcase-desktop.png",
+      "displayTablet": "src/assets/projects-display/huddle-dev-quest-showcase-tablet.png",
+      "displayMobile": "src/assets/projects-display/huddle-dev-quest-showcase-mobile.png",
+      "displayQrCode": "src/assets/projects-display/huddle-dev-quest-showcase-qrcode.png"
     }
   },
   {
@@ -65,10 +65,10 @@
       "repository": "https://gitlab.com/william.al.avila/drag-and-drop-coruja-journey-3"
     },
     "samples": {
-      "displayDesktop": "/src/assets/projects-display/drag-and-drop-showcase-desktop.png",
-      "displayTablet": "/src/assets/projects-display/drag-and-drop-showcase-tablet.png",
-      "displayMobile": "/src/assets/projects-display/drag-and-drop-showcase-mobile.png",
-      "displayQrCode": "/src/assets/projects-display/drag-and-drop-showcase-qrcode.png"
+      "displayDesktop": "src/assets/projects-display/drag-and-drop-showcase-desktop.png",
+      "displayTablet": "src/assets/projects-display/drag-and-drop-showcase-tablet.png",
+      "displayMobile": "src/assets/projects-display/drag-and-drop-showcase-mobile.png",
+      "displayQrCode": "src/assets/projects-display/drag-and-drop-showcase-qrcode.png"
     }
   }
 ]
