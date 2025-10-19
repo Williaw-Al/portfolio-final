@@ -105,7 +105,7 @@ Apresenta duas partes: uma lista de projetos selecionados e uma aba para visitar
 
 Essa seção também utiliza de uma border-image para dar um toque mais personalizado, além de uma pequena demonstração das páginas. A criação dessa parte foi feita para suportar novos projetos sendo colocados eventualmente, principalmente com o uso de um arquivo JSON personalizável.
 
-![Gif dos diferentes projetos sendo selecionados](./src/assets/readme-images/skills-hover-animation.gif 'Uso do display para os projetos')
+![Gif dos diferentes projetos sendo selecionados](./src/assets/readme-images/projects-display-list.gif 'Uso do display para os projetos')
 
 Ele apresenta também um QRCode diferenciado para os projetos na vitrine, levando o usuário diretamente para a página selecionada.
 
