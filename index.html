@@ -40,7 +40,7 @@
 
   <!--MARK: Header-->
   <header
-    class="py-2 bg-(--color-light-extra) fixed z-[900] w-full top-0 [text-shadow:2px_2px_black] border-b-4 border-[var(--color-bold-extra)] shadow-[0_2px_2px_2px_rgba(0,0,0,0.25)]">
+    class="py-2 bg-(--color-light-extra) fixed z-[900] w-full top-0 border-b-4 border-[var(--color-bold-extra)] shadow-[0_2px_2px_2px_rgba(0,0,0,0.25)]">
     <div class="container mx-auto px-5">
       <div class="flex justify-between items-center">
         <a href="#" class="w-12 rounded-xl overflow-hidden group border-3 border-(--color-secondary)
@@ -75,12 +75,14 @@
               <span class="hamburguer"></span>
             </div>
           </label>
-          <ul class="absolute top-full w-[300px] -right-2 px-2 py-4 hidden peer-checked:flex flex-col gap-4 bg-(--color-primary) rounded-xl
-          lg:static lg:w-fit lg:flex lg:flex-row lg:gap-5 lg:bg-transparent lg:p-0 lg:border-none">
+          <ul
+            class="absolute top-full w-[300px] -right-2 px-2 py-4 hidden peer-checked:flex flex-col gap-4 bg-(--color-primary) rounded-xl
+          lg:static lg:w-fit lg:flex lg:flex-row lg:gap-5 lg:bg-transparent lg:p-0 lg:border-none [text-shadow:2px_2px_black]">
             <li class="header-nav-section">
               <a href="#sobre-mim" data-title="Sobre Mim" class="header-a group">
                 <div class="header-icon-container">
-                  <img src="src/assets/header-about-icon.png" alt="Ícone Sobre mim">
+                  <!-- <img src="src/assets/header-about-icon.png" alt="Ícone Sobre mim"> -->
+                  <i class="fas fa-id-card-alt text-4xl text-(--color-book-light)"></i>
                 </div>
                 <span class="header-hamburger-text">Sobre Mim</span>
               </a>
@@ -88,14 +90,14 @@
 
             <li class="header-nav-section"><a href="#habilidades" data-title="Habilidades" class="header-a group">
                 <div class="header-icon-container">
-                  <img src="src/assets/header-skills-icon.png" alt="Ícone Sobre mim">
+                  <i class="fas fa-grip-horizontal text-4xl text-(--color-book-light)"></i>
                 </div>
                 <span class="header-hamburger-text">Habilidades</span>
               </a></li>
 
             <li class="header-nav-section"><a href="#projetos" data-title="Meus Projetos" class="header-a group">
                 <div class="header-icon-container">
-                  <img src="src/assets/header-projects-icon.png" alt="Ícone Sobre mim">
+                  <i class="fas fa-laptop-code text-4xl text-(--color-book-light)"></i>
                 </div>
                 <span class="header-hamburger-text">Projetos</span>
               </a></li>
@@ -103,13 +105,13 @@
             <li class="header-nav-section border-r-0 pr-0"><a href="#contact" data-title="Entre em contato"
                 class="header-a group">
                 <div class="header-icon-container">
-                  <img src="src/assets/header-projects-icon.png" alt="Ícone Contato">
+                  <i class="fas fa-feather text-4xl text-(--color-book-light)"></i>
                 </div>
                 <span class="header-hamburger-text">Contato</span>
               </a></li>
           </ul>
-          <div id="nav-title-display" class="hidden lg:flex absolute top-[65px] left-0 w-full bg-(--color-primary) text-center transition-opacity duration-300 opacity-0 pointer-events-none h-[40px] items-center justify-center rounded-md
-          shadow-[0_0_0_2px_var(--color-accent),_0_0_0_4px_var(--color-secondary)]"></div>
+          <div id="nav-title-display" class="hidden lg:flex absolute top-[65px] left-0 w-full bg-(--color-textarea) text-center transition-opacity duration-300 opacity-0 pointer-events-none h-[40px] items-center justify-center rounded-md
+          shadow-[0_0_0_1px_var(--color-active),_0_0_2px_3px_var(--color-accent)]"></div>
         </nav>
 
       </div>
@@ -135,43 +137,43 @@
             <li class="w-14 h-14 text-4xl/relaxed border-2 text-center rounded-xl text-blue-600 transition-all duration-200
           hover:text-white hover:border-none hover:bg-blue-600 hover:text-5xl/tight
           active:text-white active:border-none active:bg-blue-600 active:text-5xl/tight">
-              <a class="w-full h-full"
-                href="https://www.linkedin.com/in/william-al-avila/" title="Ir para o LinkedIn" target="_blank">
+              <a class="w-full h-full" href="https://www.linkedin.com/in/william-al-avila/" title="Ir para o LinkedIn"
+                target="_blank">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </li>
             <li class="w-14 h-14 text-4xl/relaxed border-2 text-center rounded-xl text-green-600 transition-all duration-200
           hover:text-white hover:border-none hover:bg-green-600 hover:text-5xl/tight
           active:text-white active:border-none active:bg-green-600 active:text-5xl/tight">
-              <a class="w-full h-full"
-                href="https://wa.me/5555991298970" title="Enviar Mensagem no WhatsApp" target="_blank">
+              <a class="w-full h-full" href="https://wa.me/5555991298970" title="Enviar Mensagem no WhatsApp"
+                target="_blank">
                 <i class="fab fa-whatsapp"></i>
               </a>
             </li>
             <li class="w-14 h-14 text-4xl/relaxed border-2 text-center rounded-xl text-gray-200 transition-all duration-200
           hover:text-gray-800 hover:border-none hover:bg-gray-200 hover:text-5xl/tight
           active:text-gray-800 active:border-none active:bg-gray-200 active:text-5xl/tight">
-              <a class="w-full h-full"
-                href="https://github.com/Williaw-Al" title="Ir para o GitHub" target="_blank">
+              <a class="w-full h-full" href="https://github.com/Williaw-Al" title="Ir para o GitHub" target="_blank">
                 <i class="fab fa-github"></i>
               </a>
             </li>
             <li class="w-14 h-14 text-4xl/relaxed border-2 text-center rounded-xl text-pink-800 transition-all duration-200
           hover:text-white hover:border-none hover:bg-pink-800 hover:text-5xl/tight
           active:text-white active:border-none active:bg-pink-800 active:text-5xl/tight">
-              <a class="w-full h-full"
-                href="https://www.instagram.com/williawawa" title="Ir para o Instagram" target="_blank">
+              <a class="w-full h-full" href="https://www.instagram.com/williawawa" title="Ir para o Instagram"
+                target="_blank">
                 <i class="fab fa-instagram"></i>
               </a>
             </li>
           </ul>
 
-        <div class="mt-10 text-xl hover:text-(--color-accent)">
-          <a href="https://docs.google.com/document/d/e/2PACX-1vTWkBdXVvVJFPmZgPsJYspvF-j-KI61UFSKDGWQfty4nX_TgyE3SbfdS5yB-7z1bsiixJpaKciOzHNi/pub" target="_blank">
-            <i class="fas fa-file-alt"></i>
-            <span>Acesse o meu currículo!</span>
-          </a>
-        </div>
+          <div class="mt-10 text-xl hover:text-(--color-accent)">
+            <a href="https://docs.google.com/document/d/e/2PACX-1vTWkBdXVvVJFPmZgPsJYspvF-j-KI61UFSKDGWQfty4nX_TgyE3SbfdS5yB-7z1bsiixJpaKciOzHNi/pub"
+              target="_blank">
+              <i class="fas fa-file-alt"></i>
+              <span>Acesse o meu currículo!</span>
+            </a>
+          </div>
 
         </div>
 
@@ -218,8 +220,8 @@
     border-[20px] border-t-[40px] border-transparent border-image-about
     bg-(--color-primary) rounded-4xl">
         <div class="w-full lg:w-2/5 px-12 self-center">
-          <img class="about-photo [border:inset_10px_solid_transparent] rounded-full" src="src/assets/images/sobre-mim-foto.png"
-            alt="Foto de perfil">
+          <img class="about-photo [border:inset_10px_solid_transparent] rounded-full"
+            src="src/assets/images/sobre-mim-foto.png" alt="Foto de perfil">
         </div>
         <div class="w-full lg:w-3/5 p-4 flex flex-col justify-evenly">
           <h2 class="py-6 text-4xl text-(--color-accent)">Sobre Mim_</h2>
@@ -238,8 +240,12 @@
 
         <div id="about-restore-button" title="Minimizar" class="absolute group z-10 -top-8 right-5
         hover:cursor-pointer">
-          <div class="absolute w-5 h-5 border-2 border-(--color-light-extra) group-hover:border-(--color-accent) group-active:border-(--color-active) top-0 left-0/2"></div>
-          <div class="absolute w-5 h-5 border-2 border-(--color-light-extra) group-hover:border-(--color-accent) group-active:border-(--color-active) top-2 -right-3 "></div>
+          <div
+            class="absolute w-5 h-5 border-2 border-(--color-light-extra) group-hover:border-(--color-accent) group-active:border-(--color-active) top-0 left-0/2">
+          </div>
+          <div
+            class="absolute w-5 h-5 border-2 border-(--color-light-extra) group-hover:border-(--color-accent) group-active:border-(--color-active) top-2 -right-3 ">
+          </div>
         </div>
 
       </div>
@@ -256,11 +262,13 @@
     <!--MARK: Skills-->
     <div id="show-skills" class="h-20 w-20"></div>
 
-    <section class="scroll-mt-24 relative bg-(--color-primary) h-fit"
-      id="habilidades">
-      <div class="absolute -top-[100px] left-0 w-full h-[100px] bg-gradient-to-b from-(--color-book-dark)/0 to-(--color-primary)"></div>
+    <section class="scroll-mt-24 relative bg-(--color-primary) h-fit" id="habilidades">
+      <div
+        class="absolute -top-[100px] left-0 w-full h-[100px] bg-gradient-to-b from-(--color-book-dark)/0 to-(--color-primary)">
+      </div>
 
-      <div class="skill-section-show flex flex-col items-center overflow-hidden pb-28 max-h-0 transition-all duration-10000 ease-in-out">
+      <div
+        class="skill-section-show flex flex-col items-center overflow-hidden pb-28 max-h-0 transition-all duration-10000 ease-in-out">
         <h2 class="text-4xl uppercase mt-16">Habilidades</h2>
 
         <div id="skills-container" class="flex flex-row flex-wrap justify-center sm:gap-8 mt-8 invisible">
@@ -454,20 +462,25 @@
 
       </div>
 
-      <div class="absolute -bottom-[100px] left-0 w-full h-[100px] bg-gradient-to-t from-(--color-book-dark)/0 to-(--color-primary)"></div>
+      <div
+        class="absolute -bottom-[100px] left-0 w-full h-[100px] bg-gradient-to-t from-(--color-book-dark)/0 to-(--color-primary)">
+      </div>
     </section>
 
     <!--MARK: Projects-->
     <section class="scroll-mt-24 mt-5 mb-20" id="projetos">
       <div class="mt-[200px] flex flex-col items-center">
         <div class="mb-20">
-          <h2 class="text-(--color-primary) text-shadow-[4px_4px_1px_var(--color-secondary)] text-4xl font-(family-name:--fonte-extra)">PROJETOS</h2>
+          <h2
+            class="text-(--color-primary) text-shadow-[4px_4px_1px_var(--color-secondary)] text-4xl font-(family-name:--fonte-extra)">
+            PROJETOS</h2>
         </div>
 
         <div class="flex flex-col px-2 lg:flex-row justify-center items-center lg:items-start gap-x-20 w-full">
           <div
             class="border-[10px] w-[300px] min-[425px]:w-[410px] max-h-fit border-transparent border-image-projects rounded-xl bg-(--color-textarea) mb-3">
-            <div id="list-header-projects" class="relative w-[235px] font-(family-name:--fonte-secundaria) font-extrabold uppercase">
+            <div id="list-header-projects"
+              class="relative w-[235px] font-(family-name:--fonte-secundaria) font-extrabold uppercase">
               <div id="project-showcase" class="absolute -top-11 left-0 z-1 is-active cursor-pointer
           w-36 p-1 px-3 border-3 border-b-0 rounded-tr-full border-(--color-accent) hover:bg-(--color-accent) active:bg-(--color-active)
           transition-all duration-200">
@@ -482,7 +495,8 @@
 
             <div>
               <p class="text-center text-sm bg-(--color-bold-extra)">Selecione uma opção:</p>
-              <ul id="showcase-projects-list" class="h-[100px] overflow-y-scroll sm:h-fit sm:overflow-y-auto text-(--color-secondary)"></ul>
+              <ul id="showcase-projects-list"
+                class="h-[100px] overflow-y-scroll sm:h-fit sm:overflow-y-auto text-(--color-secondary)"></ul>
             </div>
           </div>
 
@@ -525,35 +539,40 @@
   </main>
 
   <!--MARK: Footer-->
-  <footer class="scroll-mt-24 mt-5 min-h-[400px] text-center bg-(--color-light-extra) flex flex-col gap-7 justify-between text-(--color-primary)"
+  <footer
+    class="scroll-mt-24 mt-5 min-h-[400px] text-center bg-(--color-light-extra) flex flex-col gap-7 justify-between text-(--color-primary)"
     id="contact">
     <div class="flex flex-col md:flex-row justify-around items-center md:items-start mt-5 gap-y-5">
       <div class="socials mb-12">
         <h2 class="font-(family-name:--fonte-secundaria) text-xl font-bold mb-5">Minhas redes sociais:</h2>
         <ul class="flex flex-col justify-center items-center gap-5">
           <li class="w-36">
-            <a href="https://www.linkedin.com/in/william-al-avila/" title="Ir para o LinkedIn" target="_blank" class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
+            <a href="https://www.linkedin.com/in/william-al-avila/" title="Ir para o LinkedIn" target="_blank"
+              class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
               <i class="fab fa-linkedin-in group-hover:scale-140"></i>
               <span class="text-xl">Linkedin</span>
             </a>
           </li>
 
           <li class="w-36">
-            <a href="https://wa.me/5555991298970" title="Enviar Mensagem no WhatsApp" target="_blank" class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
+            <a href="https://wa.me/5555991298970" title="Enviar Mensagem no WhatsApp" target="_blank"
+              class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
               <i class="fab fa-whatsapp group-hover:scale-140"></i>
               <span class="text-xl">WhatsApp</span>
             </a>
           </li>
 
           <li class="w-36">
-            <a href="https://github.com/Williaw-Al" title="Ir para o GitHub" target="_blank" class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
+            <a href="https://github.com/Williaw-Al" title="Ir para o GitHub" target="_blank"
+              class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
               <i class="fab fa-github group-hover:scale-140"></i>
               <span class="text-xl">GitHub</span>
             </a>
           </li>
 
           <li class="w-36">
-            <a href="https://www.instagram.com/williawawa" title="Ir para o Instagram" target="_blank" class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
+            <a href="https://www.instagram.com/williawawa" title="Ir para o Instagram" target="_blank"
+              class="group footer-socials-icons hover:text-(--color-accent) active:text-(--color-active)">
               <i class="fab fa-instagram group-hover:scale-140"></i>
               <span class="text-xl">Instagram</span>
             </a>
@@ -579,17 +598,16 @@
           <input id="name" name="name" type="text" placeholder="Tom Cruise, Giselle Knowles..." required
             class="bg-(--color-textarea) border border-(--color-secondary) rounded-lg px-3 py-2 focus:border-(--color-accent) focus:ring-1 focus:ring-(--color-accent) placeholder-(--color-secondary) outline-none transition-all duration-200">
 
-            <label for="email" class="font-medium">Seu email para contato *</label>
-            <input type="email" name="email" id="email" placeholder="eu@email.com" required
-              class="bg-(--color-textarea) border border-(--color-secondary) rounded-lg px-3 py-2 focus:border-(--color-accent) focus:ring-1 focus:ring-(--color-accent) placeholder-(--color-secondary) outline-none transition-all duration-200">
+          <label for="email" class="font-medium">Seu email para contato *</label>
+          <input type="email" name="email" id="email" placeholder="eu@email.com" required
+            class="bg-(--color-textarea) border border-(--color-secondary) rounded-lg px-3 py-2 focus:border-(--color-accent) focus:ring-1 focus:ring-(--color-accent) placeholder-(--color-secondary) outline-none transition-all duration-200">
 
           <label for="subject" class="font-medium">Assunto (opcional)</label>
           <input type="text" name="subject" id="subject" placeholder="Trabalho, Landing page..."
             class="bg-(--color-textarea) border border-(--color-secondary) rounded-lg px-3 py-2 focus:border-(--color-accent) focus:ring-1 focus:ring-(--color-accent) placeholder-(--color-secondary) outline-none transition-all duration-200">
 
 
-          <textarea id="message" name="message"
-            placeholder="Escreva sua mensagem aqui..." required
+          <textarea id="message" name="message" placeholder="Escreva sua mensagem aqui..." required
             class="bg-(--color-textarea) border border-(--color-secondary) rounded-lg px-3 py-2 h-28 resize-none focus:border-(--color-accent) focus:ring-1 focus:ring-(--color-accent) placeholder-(--color-secondary) outline-none transition-all duration-200 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900"></textarea>
 
           <button type="submit"
@@ -607,7 +625,9 @@
       </div>
     </div>
     <div class="bg-(--color-primary) text-(--color-secondary)">
-      <p class="text-xl mb-2">Site feito por William Alexander - <a href="LICENSE.md" target="_blank" class="text-(--color-light-extra) hover:text-(--color-accent) active:text-(--color-active) text-nowrap">Licença MIT</a></p>
+      <p class="text-xl mb-2">Site feito por William Alexander - <a href="LICENSE.md" target="_blank"
+          class="text-(--color-light-extra) hover:text-(--color-accent) active:text-(--color-active) text-nowrap">Licença
+          MIT</a></p>
       <p class="text-sm text-(--color-accent)">2025</p>
     </div>
   </footer>

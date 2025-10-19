@@ -60,11 +60,11 @@
   }
 
   .header-a {
-    @apply flex gap-5 rounded-xl p-1 bg-[var(--color-bold-extra)] active:bg-[var(--color-active)] transition-all duration-200 lg:bg-transparent lg:active:bg-transparent;
+    @apply flex justify-start lg:justify-center gap-5 rounded-md p-1 bg-(--color-textarea) active:bg-(--color-active) transition-all duration-200 lg:bg-transparent lg:active:bg-transparent;
   }
 
   .header-icon-container {
-    @apply w-12 group-hover:-translate-y-1 transition-all duration-200 ease-in-out;
+    @apply w-12 h-12 grid items-center justify-end lg:justify-center group-hover:-translate-y-1 transition-all duration-200 ease-in-out [text-shadow:2px_2px_var(--color-book-dark)];
   }
 
   .header-hamburger-text {

@@ -926,6 +926,9 @@
   .text-\(--color-accent\) {
     color: var(--color-accent);
   }
+  .text-\(--color-book-light\) {
+    color: var(--color-book-light);
+  }
   .text-\(--color-light-extra\) {
     color: var(--color-light-extra);
   }
@@ -967,8 +970,8 @@
   .opacity-100 {
     opacity: 100%;
   }
-  .shadow-\[0_0_0_2px_var\(--color-accent\)\,_0_0_0_4px_var\(--color-secondary\)\] {
-    --tw-shadow: 0 0 0 2px var(--tw-shadow-color, var(--color-accent)), 0 0 0 4px var(--tw-shadow-color, var(--color-secondary));
+  .shadow-\[0_0_0_1px_var\(--color-active\)\,_0_0_2px_3px_var\(--color-accent\)\] {
+    --tw-shadow: 0 0 0 1px var(--tw-shadow-color, var(--color-active)), 0 0 2px 3px var(--tw-shadow-color, var(--color-accent));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-\[0_2px_2px_2px_rgba\(0\,0\,0\,0\.25\)\] {
@@ -1832,9 +1835,10 @@
   }
   .header-a {
     display: flex;
+    justify-content: flex-start;
     gap: calc(var(--spacing) * 5);
-    border-radius: var(--radius-xl);
-    background-color: var(--color-bold-extra);
+    border-radius: var(--radius-md);
+    background-color: var(--color-textarea);
     padding: calc(var(--spacing) * 1);
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -1843,6 +1847,9 @@
     transition-duration: 200ms;
     &:active {
       background-color: var(--color-active);
+    }
+    @media (width >= 64rem) {
+      justify-content: center;
     }
     @media (width >= 64rem) {
       background-color: transparent;
@@ -1854,7 +1861,11 @@
     }
   }
   .header-icon-container {
+    display: grid;
+    height: calc(var(--spacing) * 12);
     width: calc(var(--spacing) * 12);
+    align-items: center;
+    justify-content: flex-end;
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
@@ -1862,11 +1873,15 @@
     transition-duration: 200ms;
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+    text-shadow: 2px 2px var(--color-book-dark);
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         --tw-translate-y: calc(var(--spacing) * -1);
         translate: var(--tw-translate-x) var(--tw-translate-y);
       }
+    }
+    @media (width >= 64rem) {
+      justify-content: center;
     }
   }
   .header-hamburger-text {

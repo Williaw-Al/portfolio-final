@@ -3,10 +3,12 @@ const corujaContainer = document.getElementById("eye-container")
 const corujaEyes = document.getElementById("pupil")
 const progressBar = document.getElementById('progress-bar')
 let rectContainer = corujaContainer.getBoundingClientRect();
+const corujaHead = document.getElementById('coruja')
 
 const corujaContainerHome = document.getElementById("eye-container-home")
 const corujaEyesHome = document.getElementById("pupil-home")
 let rectContainerHome = corujaContainerHome.getBoundingClientRect();
+const corujaOwlContainer = document.getElementById('coruja-owl');
 
 const aboutWindow = document.getElementById('sobre-mim')
 const aboutRestoreButton = document.getElementById('about-restore-button')
@@ -22,22 +24,22 @@ if (inputMenuHamburger) {
 }
 
 // MARK: Barra de progresso
+let progress
+
 window.addEventListener('scroll', function () {
   const scrollY = window.scrollY; // Posição atual da rolagem
   const scrollHeight = document.documentElement.scrollHeight; // Altura total do conteúdo
   const clientHeight = document.documentElement.clientHeight; // Altura da janela visível
 
-  const progress = (scrollY / (scrollHeight - clientHeight)) * 100;
+  progress = (scrollY / (scrollHeight - clientHeight)) * 100;
 
   progressBar.style.width = `${progress}%`
 
-  const corujaShow = this.document.getElementById('coruja')
-  if (progress > 17) {
-    corujaShow.style.bottom = '-10px'
-    updateRect()
-  } else {
-    corujaShow.style.bottom = '367px'
-  }
+  if (progress > 18) {
+  corujaHead.style.bottom = '-10px'
+} else {
+  corujaHead.style.bottom = '367px'
+}
 });
 
 // MARK: Header barra NAV
@@ -197,21 +199,25 @@ document.addEventListener('DOMContentLoaded', () => {
       skill.classList.add('is-active');
     };
 
-    const startDeactivationTimer = () => {
+    const startDeactivationTimerMouse = () => {
       timeoutId = setTimeout(() => {
         skill.classList.remove('is-active');
-      }, 2000);
+      }, 2500);
+    };
+    const startDeactivationTimerTouch = () => {
+      timeoutId = setTimeout(() => {
+        skill.classList.remove('is-active');
+      }, 5000);
     };
 
     skill.addEventListener('mouseenter', activateEffect);
-    skill.addEventListener('mouseleave', startDeactivationTimer);
+    skill.addEventListener('mouseleave', startDeactivationTimerMouse);
 
-    skill.addEventListener('touchstart', (e) => {
-      e.preventDefault();
+    skill.addEventListener('touchstart', () => {
       activateEffect();
     });
     skill.addEventListener('touchend', () => {
-      startDeactivationTimer();
+      startDeactivationTimerTouch();
     });
   });
 });
@@ -232,6 +238,11 @@ listHeaderArray.forEach(list => {
     if (showcase.classList.contains('z-1')) {
       showcaseProjectsList.innerHTML = listOfProjectsToShowcase
     } else {
+      projectDescription.classList.add('hidden')
+      displayDesktop.innerHTML = ``;
+      displayTablet.innerHTML = ``;
+      displayMobile.innerHTML = ``;
+      displayQrCode.innerHTML = ``;
       showcaseProjectsList.innerHTML = `
         <li class="">
           <a href="https://github.com/Williaw-Al?tab=repositories" target="_blank" class="project-item">Minha página no Github</a>
