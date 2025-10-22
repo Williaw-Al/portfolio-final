@@ -422,3 +422,43 @@ document.getElementById("contactForm").addEventListener("submit", async function
     }
   }
 });
+
+// MARK: Theme Toggle
+
+const themeToggler = document.getElementById('theme-toggler');
+const themeIcon = document.querySelector('.theme-icon');
+let currentTheme;
+const defaultBrowserTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+const themeLight = () => {
+  currentTheme = 'light'
+  document.documentElement.setAttribute('data-theme', 'light');
+  themeIcon.classList.remove('fa-moon');
+  themeIcon.classList.add('fa-sun');
+}
+
+const themeDark = () => {
+  currentTheme = 'dark'
+  document.documentElement.setAttribute('data-theme', 'dark');
+  themeIcon.classList.remove('fa-sun');
+  themeIcon.classList.add('fa-moon');
+}
+
+const setInitialTheme = (defaultBrowserTheme) => {
+  console.log(defaultBrowserTheme);
+  
+  if (defaultBrowserTheme.matches){
+    themeDark();
+  } else {
+    themeLight();
+  }
+}
+
+setInitialTheme(defaultBrowserTheme)
+themeToggler.addEventListener('change', () => {
+  if (currentTheme === 'light'){
+    themeDark()
+  } else{
+    themeLight()
+  }
+})

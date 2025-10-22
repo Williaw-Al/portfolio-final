@@ -36,7 +36,7 @@
 
 </head>
 
-<body class="mt-[60px]">
+<body class="mt-[60px] bg-(--color-default-bg)">
 
   <!--MARK: Header-->
   <header
@@ -77,11 +77,12 @@
           </label>
           <ul
             class="absolute top-full w-[300px] -right-2 px-2 py-4 hidden peer-checked:flex flex-col gap-4 bg-(--color-primary) rounded-xl
-          lg:static lg:w-fit lg:flex lg:flex-row lg:gap-5 lg:bg-transparent lg:p-0 lg:border-none [text-shadow:2px_2px_black]">
+          lg:static lg:w-fit lg:flex lg:flex-row lg:gap-3 lg:bg-transparent lg:p-0 lg:border-none [text-shadow:2px_2px_black]
+          max-h-[50svh] overflow-y-scroll lg:overflow-y-auto
+          ">
             <li class="header-nav-section">
               <a href="#sobre-mim" data-title="Sobre Mim" class="header-a group">
                 <div class="header-icon-container">
-                  <!-- <img src="src/assets/header-about-icon.png" alt="Ícone Sobre mim"> -->
                   <i class="fas fa-id-card-alt text-4xl text-(--color-book-light)"></i>
                 </div>
                 <span class="header-hamburger-text">Sobre Mim</span>
@@ -102,13 +103,23 @@
                 <span class="header-hamburger-text">Projetos</span>
               </a></li>
 
-            <li class="header-nav-section border-r-0 pr-0"><a href="#contact" data-title="Entre em contato"
-                class="header-a group">
+            <li class="header-nav-section"><a href="#contact" data-title="Entre em contato" class="header-a group">
                 <div class="header-icon-container">
                   <i class="fas fa-feather text-4xl text-(--color-book-light)"></i>
                 </div>
                 <span class="header-hamburger-text">Contato</span>
               </a></li>
+
+            <li class="header-nav-section border-r-0 pr-0" title="Mudar Tema">
+              <label for="theme-toggler" class="header-a group hover:cursor-pointer">
+                <div class="header-icon-container">
+                  <i class="theme-icon fas fa-sun text-4xl text-(--color-book-light)"></i>
+                </div>
+                <span class="header-hamburger-text">Mudar Tema</span>
+              </label>
+              <input type="checkbox" name="theme-toggler" id="theme-toggler"
+              class="absolute appearance-none">
+            </li>
           </ul>
           <div id="nav-title-display" class="hidden lg:flex absolute top-[65px] left-0 w-full bg-(--color-textarea) text-center transition-opacity duration-300 opacity-0 pointer-events-none h-[40px] items-center justify-center rounded-md
           shadow-[0_0_0_1px_var(--color-active),_0_0_2px_3px_var(--color-accent)]"></div>
@@ -125,8 +136,8 @@
     <!--MARK: Home-->
     <section class="bg-(--color-light-extra) w-full">
       <div class="p-12 relative gap-10 flex flex-col justify-center items-center
-    lg:flex-row lg:min-h-[80svh]">
-        <div class="2xl:max-w-[1000px] tracking-[1px] text-(--color-primary) text-center lg:text-start">
+    lg:flex-row lg:min-h-[80svh] text-(--color-alt-text)">
+        <div class="2xl:max-w-[1000px] tracking-[1px] text-center lg:text-start">
           <h1 class="2xl:text-7xl">Bem vindo ao portfólio de <strong
               class="max-[410px]:text-2xl text-nowrap uppercase text-4xl 2xl:text-7xl">William Alexander</strong></h1>
           <h2 class="max-[410px]:text-sm font-(family-name:--fonte-extra) text-lg mt-5 2xl:text-4xl">
@@ -540,7 +551,7 @@
 
   <!--MARK: Footer-->
   <footer
-    class="scroll-mt-24 mt-5 min-h-[400px] text-center bg-(--color-light-extra) flex flex-col gap-7 justify-between text-(--color-primary)"
+    class="scroll-mt-24 mt-5 min-h-[400px] text-center bg-(--color-light-extra) flex flex-col gap-7 justify-between text-(--color-alt-text)"
     id="contact">
     <div class="flex flex-col md:flex-row justify-around items-center md:items-start mt-5 gap-y-5">
       <div class="socials mb-12">
@@ -584,7 +595,7 @@
         <h2 class="font-(family-name:--fonte-secundaria) text-xl font-bold mb-5">Mande uma mensagem:</h2>
 
         <form action="https://api.web3forms.com/submit" method="POST" id="contactForm"
-          class="flex flex-col gap-3 bg-(--color-primary) p-5 rounded-xl text-[12px] text-(--color-light-extra) shadow-lg">
+          class="flex flex-col gap-3 bg-(--color-primary) p-5 rounded-xl text-[12px] text-(--color-form-text) shadow-lg">
 
           <input type="hidden" name="access_key" value="bed73c46-1789-4356-99c9-dcd3dadba4e2">
           <!-- Optional: Can be type="hidden" or type="text" for subject -->
@@ -611,8 +622,7 @@
             class="bg-(--color-textarea) border border-(--color-secondary) rounded-lg px-3 py-2 h-28 resize-none focus:border-(--color-accent) focus:ring-1 focus:ring-(--color-accent) placeholder-(--color-secondary) outline-none transition-all duration-200 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900"></textarea>
 
           <button type="submit"
-            class="mt-2 cursor-pointer bg-(--color-accent) text-(--color-primary) font-semibold py-2 rounded-lg transition-all duration-200 hover:bg-(--color-active) active:scale-[0.98] focus:ring-2 focus:ring-(--color-accent) focus:ring-offset-2 focus:ring-offset-(--color-bold-extra)">Submit
-            Form</button>
+            class="mt-2 cursor-pointer bg-(--color-accent) text-(--color-alt-text) font-semibold py-2 rounded-lg transition-all duration-200 hover:bg-(--color-active) active:scale-[0.98] focus:ring-2 focus:ring-(--color-accent) focus:ring-offset-2 focus:ring-offset-(--color-bold-extra) uppercase">Enviar</button>
 
         </form>
 
@@ -624,7 +634,7 @@
 
       </div>
     </div>
-    <div class="bg-(--color-primary) text-(--color-secondary)">
+    <div class="bg-(--color-primary) text-(--color-footer-text)">
       <p class="text-xl mb-2">Site feito por William Alexander - <a href="LICENSE.md" target="_blank"
           class="text-(--color-light-extra) hover:text-(--color-accent) active:text-(--color-active) text-nowrap">Licença
           MIT</a></p>
