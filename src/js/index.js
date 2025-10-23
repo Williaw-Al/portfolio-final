@@ -35,6 +35,8 @@ window.addEventListener('scroll', function () {
 
   progressBar.style.width = `${progress}%`
 
+  this.localStorage.clear()
+
   if (progress > 18) {
   corujaHead.style.bottom = '-10px'
 } else {
@@ -215,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     skill.addEventListener('touchstart', () => {
       activateEffect();
-    });
+    }, { passive: true });
     skill.addEventListener('touchend', () => {
       startDeactivationTimerTouch();
     });
@@ -429,6 +431,7 @@ const themeToggler = document.getElementById('theme-toggler');
 const themeIcon = document.querySelector('.theme-icon');
 let currentTheme;
 const defaultBrowserTheme = window.matchMedia('(prefers-color-scheme: dark)');
+let cachedTheme = localStorage.getItem('cachedTheme')
 
 const themeLight = () => {
   currentTheme = 'light'
@@ -444,21 +447,25 @@ const themeDark = () => {
   themeIcon.classList.add('fa-moon');
 }
 
-const setInitialTheme = (defaultBrowserTheme) => {
-  console.log(defaultBrowserTheme);
-  
-  if (defaultBrowserTheme.matches){
-    themeDark();
+const setInitialTheme = (defaultBrowserTheme, cachedTheme) => {
+  if (cachedTheme) {
+    cachedTheme === 'light' ? themeLight() : themeDark()
   } else {
-    themeLight();
+    if (defaultBrowserTheme.matches){
+      themeDark();
+    } else {
+      themeLight();
+    }
   }
 }
 
-setInitialTheme(defaultBrowserTheme)
+setInitialTheme(defaultBrowserTheme, cachedTheme)
+
 themeToggler.addEventListener('change', () => {
   if (currentTheme === 'light'){
     themeDark()
   } else{
     themeLight()
   }
+  localStorage.setItem('cachedTheme', currentTheme)
 })

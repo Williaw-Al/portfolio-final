@@ -1,17 +1,3 @@
-:root {
-  --color-primary: #050017;
-  --color-secondary: #948D9A;
-  --color-accent: #FF7800;
-  --color-book-light: #9D309D;
-  --color-book-dark: #610061;
-
-  --color-light-extra: #b7b7f1;
-  --color-bold-extra: #373339;
-
-  --color-active: #EE9900;
-  --color-textarea: #14012c;
-}
-
 [data-theme="dark"] {
   --color-default-bg: #050017;
   --color-main-text: #f6f6ff;
