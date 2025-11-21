@@ -35,8 +35,6 @@ window.addEventListener('scroll', function () {
 
   progressBar.style.width = `${progress}%`
 
-  this.localStorage.clear()
-
   if (progress > 18) {
   corujaHead.style.bottom = '-10px'
 } else {
@@ -429,43 +427,63 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
 const themeToggler = document.getElementById('theme-toggler');
 const themeIcon = document.querySelector('.theme-icon');
+const servicesIframe = document.querySelector('.services-iframe');
 let currentTheme;
 const defaultBrowserTheme = window.matchMedia('(prefers-color-scheme: dark)');
-let cachedTheme = localStorage.getItem('cachedTheme')
+const cachedTheme = localStorage.getItem('currentTheme');
 
 const themeLight = () => {
-  currentTheme = 'light'
+  currentTheme = 'light';
   document.documentElement.setAttribute('data-theme', 'light');
   themeIcon.classList.remove('fa-moon');
   themeIcon.classList.add('fa-sun');
-}
+};
 
 const themeDark = () => {
-  currentTheme = 'dark'
+  currentTheme = 'dark';
   document.documentElement.setAttribute('data-theme', 'dark');
   themeIcon.classList.remove('fa-sun');
   themeIcon.classList.add('fa-moon');
-}
+};
 
 const setInitialTheme = (defaultBrowserTheme, cachedTheme) => {
   if (cachedTheme) {
-    cachedTheme === 'light' ? themeLight() : themeDark()
+    cachedTheme === 'light' ? themeLight() : themeDark();
   } else {
-    if (defaultBrowserTheme.matches){
-      themeDark();
-    } else {
-      themeLight();
-    }
+    defaultBrowserTheme.matches ? themeDark() : themeLight();
   }
-}
+};
 
-setInitialTheme(defaultBrowserTheme, cachedTheme)
+setInitialTheme(defaultBrowserTheme, cachedTheme);
 
 themeToggler.addEventListener('change', () => {
-  if (currentTheme === 'light'){
-    themeDark()
-  } else{
-    themeLight()
+  if (currentTheme === 'light') {
+    themeDark();
+  } else {
+    themeLight();
   }
-  localStorage.setItem('cachedTheme', currentTheme)
-})
+  localStorage.setItem('currentTheme', currentTheme);
+
+  // Envia mensagem de tema atualizado para o iframe filho
+  if (servicesIframe?.contentWindow) {
+    servicesIframe.contentWindow.postMessage({ type: 'setTheme', theme: currentTheme }, '*');
+  }
+});
+
+window.addEventListener('message', (event) => {
+  if (event.data?.type === 'setTheme' && (event.data.theme === 'light' || event.data.theme === 'dark')) {
+    currentTheme = event.data.theme;
+    if (currentTheme === 'light') {
+      themeLight();
+    } else {
+      themeDark();
+    }
+    localStorage.setItem('currentTheme', currentTheme);
+  }
+});
+
+servicesIframe.addEventListener('load', () => {
+  if (servicesIframe?.contentWindow) {
+    servicesIframe.contentWindow.postMessage({ type: 'setTheme', theme: currentTheme }, '*');
+  }
+});
